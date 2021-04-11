@@ -1,0 +1,32 @@
+<p>Create Empployee</p>
+<form (ngSubmit)="onSubmit()">
+<div class="form-group">
+  <label >ItemCode</label><br>
+  <input class="form-control" type="text" name="itemCode" id="itemCode" [(ngModel)]="employee.itemCode"><br>
+</div>
+<div class="form-group">
+  <label >Name1</label><br>
+  <input class="form-control" type="text" name="name1" id="name1" [(ngModel)]="employee.name1"><br>
+</div>
+<div class="form-group">
+  <label >Name2</label><br>
+  <input class="form-control" type="text" name="name2" id="name2" [(ngModel)]="employee.name2"><br>
+</div>
+<div class="form-group">
+  <label >Price</label><br>
+  <input class="form-control" type="number" name="price" id="price" [(ngModel)]="employee.price"><br>
+</div>
+<div class="form-group">
+  <label >VendorName</label><br>
+  <input class="form-control" type="text" name="vendorName" id="vendorName" [(ngModel)]="employee.vendorName"><br>
+</div>
+<div class="form-group">
+  <label >Date</label><br>
+  <input class="form-control" name="date" id="date" [(ngModel)]="employee.date"
+  type="date" placeholder="Min date 2021-01-01 and max date 2030-01-01"
+       value="2021-01-01"
+       min="2021-01-01" max="2030-01-01"
+  ><br>
+</div>
+<button class="btn btn-primary" type="submit">Submit</button>
+</form>

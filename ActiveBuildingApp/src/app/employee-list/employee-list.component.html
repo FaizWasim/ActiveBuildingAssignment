@@ -1,0 +1,50 @@
+
+<div class="panel panel-primary">
+
+  <div class="panel-heading">
+  </div>
+  <div style="margin-left: 50%;margin-bottom: 5px;">
+    <label style="border-bottom: 1px solid;">Search by <b>VendorName</b></label>
+    <div class="input-group">
+      <input type="search" class="form-control rounded" placeholder="Search By VendorName" aria-label="Search"
+        aria-describedby="search-addon"
+        #vendorInput [(ngModel)]="vendorName" (input)="search()"
+        />
+    </div>
+  </div>
+  <div style="margin-left: 50%;">
+    <label style="border-bottom: 1px solid;">Search by <b>Date</b></label>
+    <div class="input-group">
+      <input type="search" class="form-control rounded" placeholder="Search By Date in the format YYYY-MM-DD i.e 2020-12-31" aria-label="Search"
+        aria-describedby="search-addon"
+        #dateInput [(ngModel)]="date" (input)="dateSearch()"
+        />
+    </div>
+  </div>
+  <h2>Employee List</h2>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ItemCode</th>
+          <th>Name1</th>
+          <th>Name2</th>
+          <th>Price</th>
+          <th>VendorName</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.itemCode}}</td>
+          <td>{{employee.name1}}</td>
+          <td>{{employee.name2}}</td>
+          <td>{{employee.price}}</td>
+          <td>{{employee.vendorName}}</td>
+          <td>{{employee.date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
